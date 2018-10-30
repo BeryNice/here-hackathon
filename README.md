@@ -41,7 +41,9 @@ Ayudar a resolver la logística del transporte escolar a través de una WebApp q
 ![APP](https://i.imgur.com/8OIbNYK.jpg)
 ![NP](https://i.imgur.com/IjH0YJL.jpg)
 
-## Pruebas con Ususarios
+## Pruebas con Usuarios
+
+![Imgur](https://i.imgur.com/nB20b2e.png)
 
 **Tipología De Usuario Para La Prueba**
 
