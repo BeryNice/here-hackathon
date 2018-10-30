@@ -2,24 +2,26 @@
     <div class="container background">
       <div class="row">
         <div class="col-12">
-          <p id="title">HERE <br>
-             WE <br>
-             BUS</p>
+          <p id="title" class="text-center" >HERE WE BUS</p>
           <form @submit.prevent="login">
             <div id="container-form" class="form-group">
-              <input class="input form-control" type="email" v-model="email" placeholder="Correo electrónico">
-              <input class="input form-control" type="password" v-model="password" placeholder="Contraseña">
-              <a id="reset" href="#">Forgot your password</a>
+              <input class="input form-control" type="text" placeholder="Nombre(s)">
+              <input class="input form-control" type="text" placeholder="Apellidos">
+              <input class="input form-control" type="text" placeholder="ID">
+              <input class="input form-control" type="text"  placeholder="Escuela">
+              <input class="input form-control" type="password" placeholder="Contraseña">
             </div>
             <div>
-              <button id="button" class="btn btn-dark">Iniciar Sesión</button>
+              <button id="button" class="btn btn-dark">Crear Cuenta</button>
             </div>
             <div>
-              <a id="create" href="#">¿No tienes una cuenta?</a>
+              <a id="create" href="#">¿Ya tienes una cuenta?</a>
             </div>
           </form>
         </div>
       </div>
+
+      <!-- <i class="fas fa-question-circle"></i> -->
     </div>
 </template>
 
@@ -49,19 +51,17 @@ export default {
     margin-top: 80px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #0f1621;
   }
 
   p {
-    text-align: left;
-    margin-left: 49px;
-    justify-content: flex-start;
+    text-align: center;
   }
 
   #title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 36px;
-    align-items: flex-start;
   }
 
   .input {
@@ -80,13 +80,13 @@ export default {
     display: block;
   }
 
-  #reset, #create {
+   #create {
     text-decoration: none;
     color: #000000;
   }
 
   #reset {
-    margin-left: 39px;
+    margin-left: 45px;
   }
 
   .form-group #reset a {
@@ -96,24 +96,54 @@ export default {
   }
 
   #container-form {
-    margin-top: 27px;
+    margin-top: 62px;
+    margin-left: 14px;
   }
   /* Tamaños de pantalla */
 @media screen and (min-width:575px) {
   #button {
-    
+    width: 213px;
+    font-size: 28px;
+    height: 68px;
+    margin-top: 47px;
   }
   #title {
-    font-size: 60px;
-    align-items: flex-end;
+    margin-top: 26px;
+    font-size: 75px;
   }
   #container-form {
-    margin-left: 20px;
+    margin-left: 6px;
   }
 
   .input {
-    width: 537px;
-    height: 62px;
+    width: 590px;
+    height: 85px;
+    font-size: 26px;
+  }
+  #reset {
+    margin-left: 207px;
+  }
+  #reset, #create {
+    font-size: 28px;
   }
 }
+
+@media screen and (min-width: 992px) {
+    .input {
+      width: 890px;
+    }
+
+    /* #title {
+      margin-left: 127px;
+    } */
+
+    #container-form {
+      margin-left: 69px;
+    }
+
+    #reset {
+      margin-left: 494px;
+    }
+ }
+
 </style>

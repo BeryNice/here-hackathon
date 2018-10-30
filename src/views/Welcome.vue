@@ -48,6 +48,7 @@ methods: {
     margin-top: 80px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #0f1621;
   }
 
   p {
