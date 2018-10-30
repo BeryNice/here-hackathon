@@ -122,13 +122,27 @@ methods: {
   }
   #reset {
     margin-left: 207px;
+  }
+  #reset, #create {
     font-size: 28px;
   }
 }
 
 @media screen and (min-width: 992px) {
     .input {
+      width: 890px;
+    }
 
+    #title {
+      margin-left: 127px;
+    }
+
+    #container-form {
+      margin-left: 69px;
+    }
+
+    #reset {
+      margin-left: 494px;
     }
  }
 
