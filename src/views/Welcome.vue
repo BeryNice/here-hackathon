@@ -85,7 +85,7 @@ methods: {
   }
 
   #reset {
-    margin-left: 39px;
+    margin-left: 45px;
   }
 
   .form-group #reset a {
@@ -100,19 +100,36 @@ methods: {
   /* Tamaños de pantalla */
 @media screen and (min-width:575px) {
   #button {
-    
+    width: 213px;
+    font-size: 28px;
+    height: 68px;
+    margin-top: 47px;
   }
   #title {
     font-size: 60px;
     align-items: flex-end;
+    margin-top: 26px;
+    font-size: 75px;
   }
   #container-form {
-    margin-left: 20px;
+    margin-left: 6px;
   }
 
   .input {
-    width: 537px;
-    height: 62px;
+    width: 590px;
+    height: 85px;
+    font-size: 26px;
+  }
+  #reset {
+    margin-left: 207px;
+    font-size: 28px;
   }
 }
+
+@media screen and (min-width: 992px) {
+    .input {
+
+    }
+ }
+
 </style>

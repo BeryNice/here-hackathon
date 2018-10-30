@@ -1,16 +1,26 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-">
-        <form @submit.prevent="login">
-          <h3>Bienvenido, ingrese a su cuenta</h3>
-          <input type="email" v-model="email" placeholder="Ingresa tu correo">
-          <input type="password" v-model="password" placeholder="Ingresa tu contraseña">
-          <b-button class="btn btn-dark">Iniciar Sesión</b-button>
-        </form>
+    <div class="container background">
+      <div class="row">
+        <div class="col-12">
+          <p id="title">HERE <br>
+             WE <br>
+             BUS</p>
+          <form @submit.prevent="login">
+            <div id="container-form" class="form-group">
+              <input class="input form-control" type="email" v-model="email" placeholder="Correo electrónico">
+              <input class="input form-control" type="password" v-model="password" placeholder="Contraseña">
+              <a id="reset" href="#">Forgot your password</a>
+            </div>
+            <div>
+              <button id="button" class="btn btn-dark">Iniciar Sesión</button>
+            </div>
+            <div>
+              <a id="create" href="#">¿No tienes una cuenta?</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -33,13 +43,77 @@ export default {
 </script>
 
 <style scoped>
-  div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+  .background {
+    background-color: #7dbae4;
+    margin-top: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
+
+  p {
+    text-align: left;
+    margin-left: 49px;
+    justify-content: flex-start;
+  }
+
+  #title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    align-items: flex-start;
+  }
+
+  .input {
+    background-color: #ffffff;
+    width: 250px;
+    margin-left: 50px;
+    align-items: flex-end;
+  }
+  #button {
+    justify-content: center;
+    margin-top: 22px;
+    height: 48px;
+  }
+
   form > * {
     display: block;
   }
+
+  #reset, #create {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  #reset {
+    margin-left: 39px;
+  }
+
+  .form-group #reset a {
+    align-items: flex-end;
+    margin-right: 1px;
+    font-size: 7px;
+  }
+
+  #container-form {
+    margin-top: 27px;
+  }
+  /* Tamaños de pantalla */
+@media screen and (min-width:575px) {
+  #button {
+    
+  }
+  #title {
+    font-size: 60px;
+    align-items: flex-end;
+  }
+  #container-form {
+    margin-left: 20px;
+  }
+
+  .input {
+    width: 537px;
+    height: 62px;
+  }
+}
 </style>
