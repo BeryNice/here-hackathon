@@ -41,7 +41,9 @@ Ayudar a resolver la logística del transporte escolar a través de una WebApp q
 ![APP](https://i.imgur.com/8OIbNYK.jpg)
 ![NP](https://i.imgur.com/IjH0YJL.jpg)
 
-## Pruebas con Ususarios
+## Pruebas con Usuarios
+
+![Imgur](https://i.imgur.com/nB20b2e.png)
 
 **Tipología De Usuario Para La Prueba**
 
@@ -66,9 +68,6 @@ https://drive.google.com/file/d/1mW3HxDlGUwSfa--BK_Cw4r1UFgiy6z2m/view?usp=shari
 
 ## Iteraciones
 #### Primera Iteración
-
-## Testing
-![Imgur](https://i.imgur.com/nB20b2e.png)
 
 ## Prototipo de Alta Fidelidad
 
