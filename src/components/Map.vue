@@ -1,6 +1,8 @@
 <template>
-  <div class="here-map">
-    <div ref="map" v-bind:style="{ width: width, height: height }"></div>
+  <div>
+    <div class="here-map">
+      <div ref="map" v-bind:style="{ width: width, height: height }"></div>
+    </div>
   </div>
 </template>
 
@@ -34,12 +36,12 @@ export default {
   },
   mounted() {
     this.map = new H.Map(
-        this.$refs.map,
-        this.platform.createDefaultLayers().normal.map,
-        {
-            zoom: 10,
-            center: { lng: this.lng, lat: this.lat }
-        }
+      this.$refs.map,
+      this.platform.createDefaultLayers().normal.map,
+      {
+        zoom: 14,
+        center: { lng: this.lng, lat: this.lat }
+      }
     );
     this.geocoder.geocode({ searchText: this.location }, data => {
       if(data.Response.View.length > 0) {
