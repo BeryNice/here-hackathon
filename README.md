@@ -36,6 +36,9 @@ Ayudar a resolver la logística del transporte escolar a través de una WebApp q
 ## Aplicación
 ![APP](https://i.imgur.com/8OIbNYK.jpg)
 
+## Testing
+![Imgur](https://i.imgur.com/nB20b2e.png)
+
 ## Prototipo de Alta Fidelidad
 
 https://marvelapp.com/f703194
