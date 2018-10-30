@@ -1,38 +1,38 @@
 <template>
-    <div class="container background">
-      <div class="row">
-        <div class="col-12">
-          <p id="title">HERE <br>
-             WE <br>
-             BUS</p>
-          <form @submit.prevent="login">
-            <div id="container-form" class="form-group">
-              <input class="input form-control" type="email" v-model="email" placeholder="Correo electrónico">
-              <input class="input form-control" type="password" v-model="password" placeholder="Contraseña">
-              <a id="reset" href="#">Forgot your password</a>
-            </div>
-            <div>
-              <button id="button" class="btn btn-dark">Iniciar Sesión</button>
-            </div>
-            <div>
-              <a id="create" href="#">¿No tienes una cuenta?</a>
-            </div>
-          </form>
-        </div>
+  <div class="container background">
+    <div class="row">
+      <div class="col-12">
+        <p id="title">HERE <br>
+          WE <br>
+          BUS</p>
+        <form @submit.prevent="login">
+          <div id="container-form" class="form-group">
+            <input class="input form-control" type="email" v-model="email" placeholder="Correo electrónico">
+            <input class="input form-control" type="password" v-model="password" placeholder="Contraseña">
+            <a id="reset" href="#">Forgot your password</a>
+          </div>
+          <div>
+            <button id="button" class="btn btn-dark">Iniciar Sesión</button>
+          </div>
+          <div>
+            <a id="create" href="#">¿No tienes una cuenta?</a>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
-import firebase from 'firebase'
-export default {
+  import firebase from 'firebase'
+  export default {
     data () {
     return {
       email: '',
       password: ''
     }
-},
-methods: {
+  },
+  methods: {
     login () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
         .then((user) => this.$router.replace('Home'), (error) => console.error(error))

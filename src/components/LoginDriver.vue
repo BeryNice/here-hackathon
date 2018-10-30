@@ -1,28 +1,27 @@
 <template>
-    <div class="container background">
-      <div class="row">
-        <div class="col-12">
-          <p id="title" class="text-center" >HERE WE BUS</p>
-          <form @submit.prevent="login">
-            <div id="container-form" class="form-group">
-              <input class="input form-control" type="text" placeholder="Nombre(s)">
-              <input class="input form-control" type="text" placeholder="Apellidos">
-              <input class="input form-control" type="text" placeholder="ID">
-              <input class="input form-control" type="text"  placeholder="Escuela">
-              <input class="input form-control" type="password" placeholder="Contraseña">
-            </div>
-            <div>
-              <button id="button" class="btn btn-dark">Crear Cuenta</button>
-            </div>
-            <div>
-              <a id="create" href="#">¿Ya tienes una cuenta?</a>
-            </div>
-          </form>
-        </div>
+  <div class="container background">
+    <div class="row">
+      <div class="col-12">
+        <p id="title" class="text-center" >HERE WE BUS</p>
+        <form @submit.prevent="login">
+          <div id="container-form" class="form-group">
+            <input class="input form-control" type="text" placeholder="Nombre(s)">
+            <input class="input form-control" type="text" placeholder="Apellidos">
+            <input class="input form-control" type="text" placeholder="ID">
+            <input class="input form-control" type="text"  placeholder="Escuela">
+            <input class="input form-control" type="password" placeholder="Contraseña">
+          </div>
+          <div>
+            <button id="button" class="btn btn-dark">Crear Cuenta</button>
+          </div>
+          <div>
+            <a id="create" href="#">¿Ya tienes una cuenta?</a>
+          </div>
+        </form>
       </div>
-
-      <!-- <i class="fas fa-question-circle"></i> -->
     </div>
+      <!-- <i class="fas fa-question-circle"></i> -->
+  </div>
 </template>
 
 <script>
@@ -38,7 +37,7 @@ export default {
   methods: {
     login() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(user => this.$router.replace('Home'), error => console.error(error));
+      .then(user => this.$router.replace('Home'), error => console.error(error));
     },
   },
 };
@@ -97,7 +96,7 @@ export default {
 
   #container-form {
     margin-top: 62px;
-    margin-left: 14px;
+    margin-left: -10px;
   }
   /* Tamaños de pantalla */
 @media screen and (min-width:575px) {
@@ -133,10 +132,6 @@ export default {
       width: 890px;
     }
 
-    /* #title {
-      margin-left: 127px;
-    } */
-
     #container-form {
       margin-left: 69px;
     }
@@ -145,5 +140,4 @@ export default {
       margin-left: 494px;
     }
  }
-
 </style>
