@@ -6,7 +6,7 @@
              WE <br>
              BUS</p>
           <form @submit.prevent="login">
-            <div class="form-group">
+            <div id="container-form" class="form-group">
               <input class="input form-control" type="email" v-model="email" placeholder="Correo electrónico">
               <input class="input form-control" type="password" v-model="password" placeholder="Contraseña">
               <a id="reset" href="#">Forgot your password</a>
@@ -71,35 +71,48 @@ methods: {
   }
   #button {
     justify-content: center;
+    margin-top: 22px;
+    height: 48px;
   }
 
   form > * {
     display: block;
   }
 
-  #reset {
+  #reset, #create {
     text-decoration: none;
     color: #000000;
   }
+
+  #reset {
+    margin-left: 39px;
+  }
+
   .form-group #reset a {
     align-items: flex-end;
     margin-right: 1px;
     font-size: 7px;
   }
+
+  #container-form {
+    margin-top: 27px;
+  }
   /* Tamaños de pantalla */
-@media screen and (max-width:575px) {
+@media screen and (min-width:575px) {
   #button {
     
   }
   #title {
-    
+    font-size: 60px;
+    align-items: flex-end;
+  }
+  #container-form {
+    margin-left: 20px;
   }
 
   .input {
-    /* width: 300px;
-    height: 100px; */
+    width: 537px;
+    height: 62px;
   }
 }
 </style>
-
-
